@@ -16,6 +16,7 @@ a = []
 
 
 def main(video_dir, gpu_id, model_path):
+
     # load videos
     # python bin/demo_siamfc.py --model_path models/siamfc_pretrained.pth --gpu-id 0 --video-dir e:/save_data/5.mp4
     filenames = sorted(glob.glob(os.path.join(video_dir, "*.jpg")),
@@ -94,7 +95,7 @@ def main(video_dir, gpu_id, model_path):
 if __name__ == "__main__":
     # Fire(main)
     # the abs-path of the generated frame of your video
-    video_dir = ''
+    video_dir = 'frame'
     gpu_id = 0
     model_path = 'models\siamfc_pretrained.pth'
     main(video_dir, gpu_id, model_path)

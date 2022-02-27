@@ -5,11 +5,11 @@ def create_files_path(save_path):
     if not os.path.exists(save_path):
         os.mkdir(save_path)
     else:
-        pass
+        print('=========')
 
 
 if __name__ == '__main__':
-    video_path = r'xx.mp4'
+    video_path = r'test.mp4'
     frame_path = r'frame'
     current_path = os.getcwd()
 
@@ -35,7 +35,7 @@ if __name__ == '__main__':
             if (frameid >= start_time * frame_rate) & (frameid <= end_time * frame_rate):  ##以下操作取每秒的桢，并把它存为图片
                 filename = '{}.jpg'.format(count)
                 count = count + 1
-                # print(count)
+                print(count)
                 if count % sample_cycle == 0:
                     save_path = os.path.join(current_path, frame_path)
                     os.chdir(save_path)
